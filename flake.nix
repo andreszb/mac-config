@@ -7,9 +7,13 @@
     mac-app-util.url = "github:hraban/mac-app-util";
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    nvim-config = {
+      url = "github:andreszb/nvim-config";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = inputs@{ self, nix-darwin, nixpkgs, nix-homebrew, mac-app-util, home-manager }:
+  outputs = inputs@{ self, nix-darwin, nixpkgs, nix-homebrew, mac-app-util, home-manager, nvim-config }:
   let
     username = "andreszambrano";
     system = "aarch64-darwin";
@@ -17,10 +21,15 @@
       
       nixpkgs.config.allowUnfree = true;
 
+      nixpkgs.overlays = [
+        nvim-config.overlays.default
+      ];
+
       # System packages (not user-specific)
       environment.systemPackages =
         [ pkgs.betterdisplay
 	  pkgs.the-unarchiver
+	  pkgs.nixCats
         ];
 
       homebrew = {
@@ -121,6 +130,7 @@
 	{
 	  home-manager.useGlobalPkgs = true;
 	  home-manager.useUserPackages = true;
+	  home-manager.backupFileExtension = "backup";
 	  home-manager.users.andreszambrano = import ./home.nix;
 	  users.users.andreszambrano.home = "/Users/andreszambrano";
 	}
