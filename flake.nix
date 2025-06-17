@@ -7,9 +7,14 @@
     mac-app-util.url = "github:hraban/mac-app-util";
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    cli-config = {
+      url = "./cli-config";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.home-manager.follows = "home-manager";
+    };
   };
 
-  outputs = inputs@{ self, nix-darwin, nixpkgs, nix-homebrew, mac-app-util, home-manager }:
+  outputs = inputs@{ self, nix-darwin, nixpkgs, nix-homebrew, mac-app-util, home-manager, cli-config }:
   let
     username = "andreszambrano";
     system = "aarch64-darwin";
@@ -123,7 +128,20 @@
 	  home-manager.useGlobalPkgs = true;
 	  home-manager.useUserPackages = true;
 	  home-manager.backupFileExtension = "backup";
-	  home-manager.users.andreszambrano = import ./home.nix;
+	  home-manager.users.andreszambrano = {
+	    imports = [
+	      ./home.nix
+	      cli-config.homeManagerModules.default
+	    ];
+	    programs.cli-config = {
+	      enable = true;
+	      userConfig = {
+	        name = "Andres Zambrano";
+	        email = "andreszb@gmail.com";
+	        username = "andreszambrano";
+	      };
+	    };
+	  };
 	  users.users.andreszambrano.home = "/Users/andreszambrano";
 	}
       ];
