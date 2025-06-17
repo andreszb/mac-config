@@ -19,11 +19,11 @@
     texlive.combined.scheme-full
     claude-code
     raycast
+    nerd-fonts.fira-code
   ];
 
   # Fonts
   fonts.fontconfig.enable = true;
-
 
   # Kitty terminal configuration
   programs.kitty = {

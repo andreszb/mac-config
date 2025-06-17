@@ -25,18 +25,18 @@
       # System packages (not user-specific)
       environment.systemPackages =
         [ pkgs.betterdisplay
-	  pkgs.the-unarchiver
-	  pkgs.nixCats
+          pkgs.the-unarchiver
         ];
 
       homebrew = {
         user = "andreszambrano";
         enable = true;
-	onActivation = {
+        onActivation = {
           autoUpdate = true;
-	  cleanup = "uninstall";
-	  upgrade = true;
-	};
+          cleanup = "uninstall";
+          upgrade = true;
+        };
+
 	brews = [
 	  "mas"
 	];
