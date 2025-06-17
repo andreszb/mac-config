@@ -1,6 +1,9 @@
-{ config, pkgs, lib, ... }:
-
 {
+  config,
+  pkgs,
+  lib,
+  ...
+}: {
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "andreszambrano";
@@ -38,14 +41,13 @@
     };
   };
 
-
   # Create symlinks in Applications folder for Spotlight integration
   home.activation.trampolineApps = lib.hm.dag.entryAfter ["writeBoundary"] ''
     toDir="$HOME/Applications/Home Manager Apps"
-    
+
     $DRY_RUN_CMD rm -rf "$toDir"
     $DRY_RUN_CMD mkdir -p "$toDir"
-    
+
     # Find all GUI apps installed via Home Manager
     for pkg in ${lib.concatStringsSep " " (map (pkg: "${pkg}") config.home.packages)}; do
       if [ -d "$pkg/Applications" ]; then
@@ -56,7 +58,7 @@
         done
       fi
     done
-    
+
     # Also create symlinks in root /Applications if we have write access
     if [ -w "/Applications" ]; then
       rootDir="/Applications/Home Manager Apps"
