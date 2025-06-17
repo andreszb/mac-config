@@ -44,5 +44,21 @@ The flake uses several key inputs:
 - `nix-homebrew`: Integration for Homebrew package management
 - `mac-app-util`: Utilities for macOS app integration
 - `home-manager`: User environment and dotfiles management
+- `cli-config`: Custom CLI tools and configurations (github:andreszb/cli-config)
 
 The configuration is modular, combining nix-darwin base configuration with nix-homebrew, mac-app-util, and home-manager modules. System packages are managed through Nix, while GUI applications and Mac App Store apps are managed through Homebrew integration. User-specific configurations (like Git settings) are managed through Home Manager in `home.nix`.
+
+## Git Submodules
+
+This repository includes git submodules for reference and quick local development:
+- `cli-config/`: CLI tools and configurations submodule
+
+**Important**: While git submodules are present for local development and reference, the flake configuration uses GitHub repositories as inputs rather than local paths. This ensures reproducibility and proper dependency management in the Nix ecosystem. The submodules serve as:
+- Quick reference for configuration structure
+- Local development environment for testing changes
+- Easy access to update and modify configurations before pushing to GitHub
+
+When making changes to submodule configurations, remember to:
+1. Make changes in the submodule directory
+2. Commit and push changes to the submodule's GitHub repository
+3. Run `nix flake update` to update the lock file with the latest commits
