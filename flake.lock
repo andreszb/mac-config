@@ -32,6 +32,28 @@
         "type": "github"
       }
     },
+    "cli-config": {
+      "inputs": {
+        "home-manager": "home-manager",
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "nvim-config": "nvim-config"
+      },
+      "locked": {
+        "lastModified": 1750122683,
+        "narHash": "sha256-DTZOp+3Vtc4SYh6CguT3XuQ7XhxBlWXn45kLMWSAnaY=",
+        "owner": "andreszb",
+        "repo": "cli-config",
+        "rev": "c63952c9f3346e43a10145146ab82f694e722ab2",
+        "type": "github"
+      },
+      "original": {
+        "owner": "andreszb",
+        "repo": "cli-config",
+        "type": "github"
+      }
+    },
     "flake-compat": {
       "flake": false,
       "locked": {
@@ -72,6 +94,7 @@
     "home-manager": {
       "inputs": {
         "nixpkgs": [
+          "cli-config",
           "nixpkgs"
         ]
       },
@@ -81,6 +104,26 @@
         "owner": "nix-community",
         "repo": "home-manager",
         "rev": "79dfd9aa295e53773aad45480b44c131da29f35b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "home-manager",
+        "type": "github"
+      }
+    },
+    "home-manager_2": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1750107071,
+        "narHash": "sha256-yfuHCO4m+gu3OBNGnP0/TL5W8nLXrC/EV1fs/+YcoL8=",
+        "owner": "nix-community",
+        "repo": "home-manager",
+        "rev": "0edffd088e42fdc48598b37d88eb5345e2ca3937",
         "type": "github"
       },
       "original": {
@@ -118,11 +161,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1749739639,
-        "narHash": "sha256-oubMGIrW/vBdX+xw47LEcxrqYqZUdLYPE8xrLDKoBE8=",
+        "lastModified": 1749873626,
+        "narHash": "sha256-1Mc/D/1RwwmDKY59f4IpDBgcQttxffm+4o0m67lQ8hc=",
         "owner": "nix-darwin",
         "repo": "nix-darwin",
-        "rev": "72c88d5928196159e3a0d03e67b25d8044546ca6",
+        "rev": "2f140d6ac8840c6089163fb43ba95220c230f22b",
         "type": "github"
       },
       "original": {
@@ -137,11 +180,11 @@
         "brew-src": "brew-src"
       },
       "locked": {
-        "lastModified": 1749519004,
-        "narHash": "sha256-alxmYUeHT/rKYKuHuOHDazQqCIYdbEsaEpc1uMGosfM=",
+        "lastModified": 1749952250,
+        "narHash": "sha256-V2ix0knpdJXirQ+4pjbnggjdSALTsFWGIP/NDpaQkdU=",
         "owner": "zhaofengli-wip",
         "repo": "nix-homebrew",
-        "rev": "e048b6646bc275341e0a854fa06168cec4c33962",
+        "rev": "37126f06f4890f019af3d7606ce5d30a457afcd0",
         "type": "github"
       },
       "original": {
@@ -152,11 +195,11 @@
     },
     "nixCats": {
       "locked": {
-        "lastModified": 1749615550,
-        "narHash": "sha256-nXSxrEkz5mPFJ+YMLwVwGXQReHk7iJTWvqM1bWszKvQ=",
+        "lastModified": 1749615682,
+        "narHash": "sha256-3T2Yl+xSnx7snXZkMaQNHCvlj0CB+lyAj+Q/+eeh+Ns=",
         "owner": "BirdeeHub",
         "repo": "nixCats-nvim",
-        "rev": "a78695b22d2e8cbd075ead3ee718d0decc4bdf57",
+        "rev": "c0148957e961100bff3fd213b8a4bc5f669f3028",
         "type": "github"
       },
       "original": {
@@ -183,11 +226,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1749776303,
-        "narHash": "sha256-OHibOvVwKqO1qvRg0r3agtd1EagW4THBcoWT7QGgcNo=",
+        "lastModified": 1749903597,
+        "narHash": "sha256-jp0D4vzBcRKwNZwfY4BcWHemLGUs4JrS3X9w5k/JYDA=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "6e7721e37bf00fa7ea44ac3cfc9d2411284ec3ef",
+        "rev": "41da1e3ea8e23e094e5e3eeb1e6b830468a7399e",
         "type": "github"
       },
       "original": {
@@ -201,15 +244,16 @@
       "inputs": {
         "nixCats": "nixCats",
         "nixpkgs": [
+          "cli-config",
           "nixpkgs"
         ]
       },
       "locked": {
-        "lastModified": 1749763464,
-        "narHash": "sha256-VjGRRbWq1o2IGD6wyolIfJjjrj5pBGDkDdyrXtfOm6I=",
+        "lastModified": 1749842877,
+        "narHash": "sha256-0uLzRDi1+sFGgpT2U0HAqlXGkmZ25H7/DPsTL6rMll4=",
         "owner": "andreszb",
         "repo": "nvim-config",
-        "rev": "bcef2c76c5dfabd9842a11cfacc93e45e4d4d9a7",
+        "rev": "746e94e6ce29f2e0706ff279d2d7251bf024a917",
         "type": "github"
       },
       "original": {
@@ -220,12 +264,12 @@
     },
     "root": {
       "inputs": {
-        "home-manager": "home-manager",
+        "cli-config": "cli-config",
+        "home-manager": "home-manager_2",
         "mac-app-util": "mac-app-util",
         "nix-darwin": "nix-darwin",
         "nix-homebrew": "nix-homebrew",
-        "nixpkgs": "nixpkgs_2",
-        "nvim-config": "nvim-config"
+        "nixpkgs": "nixpkgs_2"
       }
     },
     "systems": {

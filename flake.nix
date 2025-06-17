@@ -10,6 +10,7 @@
     cli-config = {
       url = "github:andreszb/cli-config";
       inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nvim-config.url = "github:andreszb/nvim-config";
     };
   };
 
