@@ -41,11 +41,11 @@
         "nvim-config": "nvim-config"
       },
       "locked": {
-        "lastModified": 1750129734,
+        "lastModified": 1750133718,
         "narHash": "sha256-kqyiVZPpTzG/NuTkjXbO4v9dBYOhntUIKp9nVJ4Ma/I=",
         "owner": "andreszb",
         "repo": "cli-config",
-        "rev": "7ceff53c5c39950c778f68e03d4605de15477323",
+        "rev": "13dfb6c3a9b657077fca8dcb572d0ddeb410247a",
         "type": "github"
       },
       "original": {
