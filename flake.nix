@@ -140,6 +140,7 @@
 	        email = "andreszb@gmail.com";
 	        username = "andreszambrano";
 	      };
+	      nvim-config = cli-config.inputs.nvim-config;
 	    };
 	  };
 	  users.users.andreszambrano.home = "/Users/andreszambrano";
