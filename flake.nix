@@ -7,23 +7,15 @@
     mac-app-util.url = "github:hraban/mac-app-util";
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
-    nvim-config = {
-      url = "github:andreszb/nvim-config";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
-  outputs = inputs@{ self, nix-darwin, nixpkgs, nix-homebrew, mac-app-util, home-manager, nvim-config }:
+  outputs = inputs@{ self, nix-darwin, nixpkgs, nix-homebrew, mac-app-util, home-manager }:
   let
     username = "andreszambrano";
     system = "aarch64-darwin";
     configuration = { pkgs, ... }: {
       
       nixpkgs.config.allowUnfree = true;
-
-      nixpkgs.overlays = [
-        nvim-config.overlays.default
-      ];
 
       # System packages (not user-specific)
       environment.systemPackages =
