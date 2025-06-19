@@ -18,6 +18,7 @@
     notion-app
     discord
     spotify
+    firefox
     whatsapp-for-mac
     texlive.combined.scheme-full
     claude-code
