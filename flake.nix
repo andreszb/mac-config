@@ -27,9 +27,19 @@
       nixpkgs.config.allowUnfree = true;
 
       # System packages (not user-specific)
-      environment.systemPackages = [
-        pkgs.betterdisplay
-        pkgs.the-unarchiver
+      environment.systemPackages = with pkgs; [
+        betterdisplay
+        the-unarchiver
+        notion-app
+        discord
+        spotify
+        firefox
+        whatsapp-for-mac
+        texlive.combined.scheme-full
+        claude-code
+        raycast
+        nerd-fonts.fira-code
+        anki-bin
       ];
 
       homebrew = {
