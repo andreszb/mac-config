@@ -28,6 +28,7 @@
     settings = {
       background_opacity = "0.95";
       window_padding_width = 8;
+      cursor_trail = 3;
     };
   };
 
