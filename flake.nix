@@ -58,7 +58,6 @@
           "1password"
           "readdle-spark"
           "logi-options+"
-          "amethyst"
           "ticktick"
           "zen"
           "tor-browser"
