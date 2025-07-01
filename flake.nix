@@ -26,10 +26,6 @@
     configuration = {pkgs, ...}: {
       nixpkgs.config.allowUnfree = true;
 
-      # System packages (not user-specific) - moved to Home Manager
-      environment.systemPackages = with pkgs; [
-      ];
-
       homebrew = {
         user = "andreszambrano";
         enable = true;
