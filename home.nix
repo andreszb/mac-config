@@ -18,7 +18,19 @@
   # Fonts
   fonts.fontconfig.enable = true;
   home.packages = with pkgs; [
+    # Fonts
     nerd-fonts.fira-code
+    
+    # Applications moved from system packages
+    betterdisplay
+    the-unarchiver
+    notion-app
+    discord
+    spotify
+    firefox
+    whatsapp-for-mac
+    raycast
+    anki-bin
   ];
 
   # Kitty terminal configuration

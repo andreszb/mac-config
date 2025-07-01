@@ -26,20 +26,8 @@
     configuration = {pkgs, ...}: {
       nixpkgs.config.allowUnfree = true;
 
-      # System packages (not user-specific)
+      # System packages (not user-specific) - moved to Home Manager
       environment.systemPackages = with pkgs; [
-        betterdisplay
-        the-unarchiver
-        notion-app
-        discord
-        spotify
-        firefox
-        whatsapp-for-mac
-        texlive.combined.scheme-full
-        claude-code
-        raycast
-        nerd-fonts.fira-code
-        anki-bin
       ];
 
       homebrew = {
@@ -68,6 +56,7 @@
           "1Password for Safari" = 1569813296;
           Xcode = 497799835;
           "HP Smart for Desktop" = 1474276998;
+          "Speechify" = 1209815023;
         };
       };
 
@@ -145,6 +134,7 @@
             imports = [
               ./home.nix
               cli-config.homeManagerModules.default
+              mac-app-util.homeManagerModules.default
             ];
             programs.cli-config = {
               enable = true;
