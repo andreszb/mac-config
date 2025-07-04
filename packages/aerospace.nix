@@ -81,6 +81,13 @@
           "if".app-id = "com.apple.ActivityMonitor";
           run = "layout floating";
         }
+        {
+          "if" = {
+            app-id = "org.nixos.firefox";
+            window-title-regex-substring = "Picture-in-Picture";
+          };
+          run = "layout floating";
+        }
       ];
     };
   };
