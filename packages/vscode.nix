@@ -20,6 +20,11 @@
         "security.workspace.trust.emptyWindow" = false;
         "security.workspace.trust.untrustedFiles" = "open";
         "security.workspace.trust.banner" = "never";
+        
+        # Disable file operation confirmation prompts
+        "explorer.confirmDragAndDrop" = false;      # Moving/copying files via drag and drop
+        "explorer.confirmDelete" = false;           # Deleting files to trash/permanently
+        "explorer.confirmPasteNative" = false;      # Pasting files from system clipboard
       };
       keybindings = [
         {
