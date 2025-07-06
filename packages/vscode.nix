@@ -5,14 +5,14 @@
     profiles.default = {
       extensions = with pkgs.vscode-extensions; [
         ms-toolsai.jupyter
-        enkia.tokyo-night
+        github.github-vscode-theme
       ];
       userSettings = {
         "editor.formatOnSave" = true;
         "editor.fontSize" = 14;
         "editor.fontFamily" = "FiraCode Nerd Font";
         "editor.fontLigatures" = true;
-        "workbench.colorTheme" = "Tokyo Night";
+        "workbench.colorTheme" = "GitHub Dark Default";
         
         # Security - Disable workspace trust features
         "security.workspace.trust.enabled" = false;
